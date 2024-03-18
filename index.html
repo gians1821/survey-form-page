@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Survey Form</title>
+</head>
+<body>
+    <!-- Main Container -->
+    <main id="card">
+        <!-- Title -->
+        <h1 id="title">Formulario de Inscripción</h1>
+        <!-- Description -->
+        <p id="description">(para inscribirse a un curso de ciberseguridad)</p>
+        <!--Form Container -->
+        <form id="survey-form">
+            
+            <section>
+                <h2 id="contact-subtitle" class="subtitle">Datos de Contacto</h2 class="subtitle">
+                <!-- Name Field -->
+                <label class="field-section" id="name-label">
+                    <span class="field-section__description">Nombres y apellidos:</span> 
+                    <input class="text-field" type="text" id="name" placeholder="Alan Castro..." required>
+                </label>
+                <!-- Email Field -->
+                <label class="field-section" id="email-label">
+                    <span class="field-section__description">Correo electrónico: </span>
+                    <input class="text-field" type="email" id="email" placeholder="ejemplo@gmail.com" required>
+                </label>
+                <!-- Age Field -->
+                <label class="field-section" id="number-label">
+                    <span class="field-section__description">Edad:</span>
+                    <input class="text-field" type="number" id="number" placeholder="18" min="10" max="100" required>
+                </label>    
+            </section>
+            
+            <section>
+                <h2 id="content-subtitle" class="subtitle">Contenido del Curso</h2 class="subtitle">
+                <!-- Preferred Language Field-->
+                <label class="field-section">
+                    <span class="field-section__description">Lenguaje de programación preferido:</span>
+                    <select id="dropdown">
+                        <option class="text-field">Python</option>
+                        <option class="text-field">Bash Script</option>
+                        <option class="text-field">C</option>
+                        <option class="text-field">C++</option>
+                    </select>    
+                </label>
+                <!-- Preferred Course Topic Field -->
+                <section class="field-section">
+                    <span class="field-section__description">¿Qué tema te gustaría tratar en el curso de ciberseguridad?</span>
+                    <label class="field-option" for="pentesting">
+                        <input id="pentesting" type="radio" name="likes" value="pentesting">
+                        <span class="field-option__description text-field">Pentesting</span>
+                    </label>
+                    <label class="field-option" for="social-engineering">
+                        <input id="social-engineering" type="radio" name="likes" value="social-engineering">
+                        <span class="field-option__description text-field">Ingeniería Social</span>
+                    </label>
+                    <label class="field-option" for="redes">
+                        <input id="redes" type="radio" name="likes" value="redes" checked>
+                        <span class="field-option__description text-field">Redes e Infraestructura</span>
+                    </label>
+                    <label class="field-option" for="ethical-hacking">
+                        <input id="ethical-hacking" type="radio" name="likes" value="ethical-hacking">
+                        <span class="field-option__description text-field">Hacking Ético</span>
+                    </label>
+                    <label class="field-option" for="kali-tools">
+                        <input id="kali-tools" type="radio" name="likes" value="kali-tools">
+                        <span class="field-option__description text-field">Herramientas de Kali Linux</span>
+                    </label>
+                </section>        
+            </section>
+            
+            <section>
+                <h2 id="reasons-subtitle" class="subtitle">Razones del Curso</h2 class="subtitle">
+                <!-- Course Reasons Field -->
+                <section class="field-section">
+                    <span class="field-section__description">¿Por qué motivos deseas participar en el curso de ciberseguridad?</span>
+                    <label class="field-option" for="learning">
+                        <input id="learning" type="checkbox" name="why" value="learning">
+                        <span class="text-field">Aprender personalmente</span>
+                    </label>
+                    <label class="field-option" for="money">
+                        <input id="money" type="checkbox" name="why" value="money">
+                        <span class="text-field">Para poder ganar dinero</span>
+                    </label>
+                    <label class="field-option" for="share">
+                        <input id="share" type="checkbox" name="why" value="share">
+                        <span class="text-field">Compartir mi conocimiento</span>
+                    </label>
+                </section>
+                <!-- Main Reason Field -->
+                <label class="field-section">
+                    <span class="field-section__description">Resúmenos en dos líneas tu motivo principal para estudiar ciberseguridad:</span> 
+                    <textarea class="text-area text-field" id="" rows="2"></textarea>
+                </label>    
+            </section>
+            
+            <!-- Submit Button -->
+            <section class="button-section">
+                <button class="form-button" id="submit">Enviar</button>
+            </section>
+        </form>
+    </main>
+</body>
+</html>
